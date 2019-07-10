@@ -23,6 +23,7 @@ from this file if found.
 $my_base_url       = "https://rally1.rallydev.com/slm"
 $my_username       = "user@company.com"
 $my_password       = "topsecret"
+$my_api_version    = "v2.0"
 $my_workspace_oid  = "12345678910" # (ObjectID of the workspace you wish to export attachments from.)
 </pre>
 
@@ -39,12 +40,12 @@ $my_workspace_oid  = "12345678910" # (ObjectID of the workspace you wish to expo
 	<pre> c:\> ruby export-workspace-attachments.rb </pre>
 
 3) All attachments found will be saved in:
-<pre> ./Saved_Attachments/WS####/FormattedIDs/attachment-###.{type}.{ext} </pre>
+<pre> ./Saved_Attachments/WS###/FormattedID/attachment-###.{type}.{ext} </pre>
 
    Where:
 <pre>   
 WS### - is the ordinal workspace number found (1 based).
-FormattedIDs - is the combination of the FormattedID(s) of the Artifact, TestCaseResult or TestSet to which the attachment belongs.
+FormattedID - is the FormattedID of the Artifact, TestCaseResult or TestSet to which the attachment belongs.
 attachment-### - is the ordinal attachment number found in a given workspace (1 based).
 {type} - is the type of file, either "METADATA" or "DATA".
 {ext} - is the file extension found on the attachment. Used on the DATA {type} file only.
